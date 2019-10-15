@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Booking</title>
+
+       <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'CSS/form.css') }}">
+
+        <!-- UIkit JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+
+    </head>
+
+    <form class="uk-form" action = /booking method="POST">
+
+        <fieldset data-uk-margin>
+            <legend style="font-size:40px">Book Your Stay</legend>
+            <legend>Check In Date</legend>
+            <input type="date" name = "cid" placeholder = "Check in Date" required>
+            <legend>Check Out Date</legend>
+            <input type="date" name = "cod" placeholder = "Check out Date" required>
+            <legend>No Of Rooms</legend>
+            <input type="number" name = "no_of_rooms" placeholder = "Number of Rooms Required" required>
+            <legend>Room Type</legend>
+            <select required>
+                <option>Regular</option>
+                <option>Deluxe</option>
+            </select>
+            <legend>Amenity Package</legend>
+            <select required>
+                <option>Silver</option>
+                <option>Gold</option>
+                <option>Platinum</option>
+            </select>
+            <div>
+                <button class=".uk-button-success" type = "submit" value = "Submit">Submit</button>
+            </div>
+            <div>
+                <label><input type="checkbox" required>I am not a Robot &#128540;</label>
+            </div>
+        </fieldset>
+    
+    </form>
+</html>
+{%endblock%}
