@@ -1,4 +1,4 @@
 flask
 flask-wtf
 flask-bootstrap
-flask-sqlaclchemy
+Flask-SQLAlchemy==2.4.0
