@@ -1,5 +1,0 @@
-https://www.youtube.com/watch?v=K0vSCCAM2ss
-
-https://pythonspot.com/login-authentication-with-flask/
-
-https://codepen.io/theseyedi/pen/XvroaB
